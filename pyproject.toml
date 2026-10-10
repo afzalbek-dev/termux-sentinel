@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "termux-sentinel"
+version = "1.0.0"
+description = "ARM64 & Termux System Health and Metrics Monitoring Daemon"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Afzalbek", email = "afzalbek.dev@gmail.com"}]
+dependencies = []
+
+[project.scripts]
+sentinel = "termux_sentinel.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
